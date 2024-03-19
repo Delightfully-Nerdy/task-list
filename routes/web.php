@@ -76,7 +76,7 @@ Route::get('/tasks', function () use($tasks) {
     ]);
 })->name('tasks.index');
 
-Route::get('/taasks/{id}', function ($id) use($tasks) {
+Route::get('/tasks/{id}', function ($id) use($tasks) {
     $task = collect($tasks)->firstWhere('id', $id);
 
     if (! $task) {
